@@ -90,16 +90,16 @@ const ShopContextProvider = ({ children }) => {
     });
   };
 
-  const getTotalCartAmount = () => {
-    let totalAmount = 0;
-    for (const item in cartItems) {
-      if (cartItems[item] > 0) {
-        let itemInfo = contextValue.find((product) => product.id === Number(item));
-        totalAmount += itemInfo.new_price * cartItems[item];
-      }
-    }
-    return totalAmount;
-  };
+  // const getTotalCartAmount = () => {
+  //   let totalAmount = 0;
+  //   for (const item in cartItems) {
+  //     if (cartItems[item] > 0) {
+  //       let itemInfo = contextValue.find((product) => product.id === Number(item));
+  //       totalAmount += itemInfo.new_price * cartItems[item];
+  //     }
+  //   }
+  //   return totalAmount;
+  // };
 
   const getTotalCartItems = () => {
     let totalItem = 0;
@@ -113,7 +113,8 @@ const ShopContextProvider = ({ children }) => {
 
   return (
     <ShopContext.Provider
-      value={{ contextValue, cartItems, addToCart, removeFromCart, getTotalCartAmount, getTotalCartItems }}
+      // value={{ contextValue, cartItems, addToCart, removeFromCart, getTotalCartAmount, getTotalCartItems }}
+      value={{ contextValue, cartItems, addToCart, removeFromCart, getTotalCartItems }}
     >
       {children}
     </ShopContext.Provider>

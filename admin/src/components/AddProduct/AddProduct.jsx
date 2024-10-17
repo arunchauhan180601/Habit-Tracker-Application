@@ -13,10 +13,10 @@ const AddProduct = () => {
   const [productDetails, setProductDetails] = useState({
     name: "",
     image: "",
-    stock: "",
-    category: "women",
-    old_price: "",
-    new_price: ""
+    goal: "",
+    category: "weekly",
+    message: "",
+    date: ""
   })
 
   const changeHandler = (e) => {
@@ -60,10 +60,10 @@ const AddProduct = () => {
     setProductDetails({
       name: "",
       image: "",
-      stock: "",
-      category: "women",
-      old_price: "",
-      new_price: ""
+      goal: "",
+      category: "weekly",
+      message: "",
+      date: ""
 
 
     })
@@ -80,12 +80,12 @@ const AddProduct = () => {
         <div className="container addProductMain pt-3 ps-3 pe-3  pb-3">
 
           <div className="row">
-            <div className="col-12 text-center fw-bold"><h2 className="fw-bold pt-3 pb-2"> Add Product</h2></div>
+            <div className="col-12 text-center fw-bold"><h2 className="fw-bold pt-3 pb-2"> Add Habit</h2></div>
           </div>
 
           <div className="row mt-3 ">
             <div className="col-12">
-              <label htmlFor="name" >Product titel</label><br />
+              <label htmlFor="name" >Habit Titel</label><br />
               <input type="text" placeholder="Type here" name="name" id="name" value={productDetails.name}
                 onChange={changeHandler}></input>
             </div>
@@ -93,12 +93,12 @@ const AddProduct = () => {
 
           <div className="row mt-3 d-flex justify-content-between">
             <div className="col-6">
-              <label htmlFor="old_price">Price</label>
-              <input text="Number" placeholder="Type here" name="old_price" value={productDetails.old_price} onChange={changeHandler}></input>
+              <label htmlFor="goal">Goal</label>
+              <input type="text" placeholder="Type here" name="goal" value={productDetails.goal} onChange={changeHandler}></input>
             </div>
             <div className="col-6">
-              <label htmlFor="old_price">Offer Price</label>
-              <input text="Number" placeholder="Type here" name="new_price" value={productDetails.new_price} onChange={changeHandler}></input>
+              <label htmlFor="date">Date</label>
+              <input type="date" placeholder="Type here" name="date" value={productDetails.date} onChange={changeHandler}></input>
             </div>
           </div>
 
@@ -106,15 +106,15 @@ const AddProduct = () => {
             <div className="col-6 col-md-6">
               <label htmlFor="category">Product Category</label>
               <select name="category" value={productDetails.category} onChange={changeHandler}>
-                <option value="men">Men</option>
-                <option value="women">Women</option>
-                <option value="kid">Kid</option>
+                <option value="daily">Daily</option>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
               </select>
             </div>
 
-            <div className="col-6 col-md-6">
-              <label htmlFor="stock">Product Stock</label>
-              <input text="Number" placeholder="Enter Stock" name="stock" value={productDetails.stock} onChange={changeHandler}></input>
+            <div className="col-6 col-md-6" >
+              <label htmlFor="message">Motivational Message</label><br></br>
+              <textarea text="text" placeholder="Enter Message" name="message" value={productDetails.message} onChange={changeHandler}></textarea>
             </div>
           </div>
 

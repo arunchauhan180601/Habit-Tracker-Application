@@ -14,8 +14,8 @@ const DiscriptionBox = () => {
       </div>
       <div className="row">
         <div className="col-12 border p-4">
-          <p className='discriptionPara' > A website that allows people to buy and sell physical goods, services, and digital products over the internet rather than at a brick-and-mortar location. Through an e-commerce website, a business can process orders, accept payments, manage shipping and logistics, and provide customer service.</p>
-          <p className='discriptionPara'>An eCommerce website is an online destination where buyers shop for goods and sellers offer products and services. It's the hub of information about a company and what they sell. On an eCommerce website, you'll find product listings, eCommerce blog content, company history, and contact information.</p>
+          <p className='discriptionPara' > A habit tracker app is a digital tool that helps users monitor their daily routines, track progress, and stay committed to building new habits. With this app, you can set personal goals, log activities, and view your progress over time. The app provides reminders, motivational insights, and streak tracking to encourage consistency. </p>
+          <p className='discriptionPara'>It's an all-in-one solution for improving productivity, health, and well-being by reinforcing positive habits and reducing negative ones. Additionally, you can visualize trends, adjust targets, and celebrate milestones to stay motivated on your self-improvement journey.</p>
         </div>
       </div>
     </div>

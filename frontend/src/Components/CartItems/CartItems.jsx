@@ -11,11 +11,11 @@ const CarItems = () => {
   return (
     <div className="container cartMain">
       <div className="row fw-bold text-center cardBorder  bgcolorofHeadingRow">
-        <div className="col-sm-2 col-3 pt-3  pb-3 cardBorder">Products</div>
+        <div className="col-sm-2 col-3 pt-3  pb-3 cardBorder">Image</div>
         <div className="col-sm-2 col-3 pt-3  pb-3 cardBorder">Title</div>
-        <div className="col-sm-2 col-3 pt-3  pb-3 cardBorder">Price</div>
-        <div className="col-sm-2 col-3 pt-3  pb-3 cardBorder">Quantity</div>
-        <div className="col-sm-2 col-3 pt-3  pb-3 cardBorder">Total</div>
+        <div className="col-sm-2 col-3 pt-3  pb-3 cardBorder">Goal</div>
+        <div className="col-sm-2 col-3 pt-3  pb-3 cardBorder">Date</div>
+        <div className="col-sm-2 col-3 pt-3  pb-3 cardBorder">Category</div>
         <div className="col-sm-2 col-3 pt-3  pb-3 cardBorder">Remove</div>
       </div>
       {contextValue.map((item, index) => {
@@ -23,16 +23,16 @@ const CarItems = () => {
           return <div className="row text-center mt-3 cardBorder bgcolorOfRow" key={item.id}>
             <div className="col-sm-2 col-3 pt-3  pb-3 cardBorder overflow-hidden"> <img src={item.image} className='cartImage' /> </div>
             <div className="col-sm-2 col-3 pt-3  pb-3 cardBorder">{item.name}</div>
-            <div className="col-sm-2 col-3 pt-3  pb-3 cardBorder">${item.new_price}</div>
-            <div className="col-sm-2 col-3 pt-3  pb-3 cardBorder"><button className='cartBtn'> {cartItems[item.id]} </button></div>
-            <div className="col-sm-2 col-3 pt-3  pb-3 cardBorder"> ${item.new_price * cartItems[item.id]} </div>
+            <div className="col-sm-2 col-3 pt-3  pb-3 cardBorder">{item.goal}</div>
+            <div className="col-sm-2 col-3 pt-3  pb-3 cardBorder">{item.date}</div>
+            <div className="col-sm-2 col-3 pt-3  pb-3 cardBorder">{item.category}</div>
             <div className="col-sm-2 col-3 pt-3  pb-3 cardBorder "><img src={remove_icon} onClick={() => { removeFromCart(item.id) }} alt='remove_icon'></img></div>
           </div>
         }
         return null
       })}
 
-      <div className="row mt-5 mb-5 d-flex justify-content-between">
+      {/* <div className="row mt-5 mb-5 d-flex justify-content-between">
         <div className="col-md-7 col-lg-5 col-sm-8 ">
           <h3 className='mb-4'>Cart Totals</h3>
           <div className='d-flex justify-content-between'>
@@ -54,7 +54,7 @@ const CarItems = () => {
 
         </div>
 
-      </div>
+      </div> */}
 
     </div>
   )

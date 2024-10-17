@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const multer = require("multer");
 const jwt = require("jsonwebtoken");
 const { type } = require("os");
+const moment = require('moment');
 const PORT = process.env.PORT || 4000;
 const app = express();
 require('dotenv').config();
@@ -19,7 +20,7 @@ app.use(express.urlencoded({extended: false}));
 
 
 app.get("/", (req, res)=> {
-  res.send("Welcome to E-commerce backend API");
+  res.send("Welcome to Habit-Tracker backend API");
 })
 
 
@@ -63,16 +64,17 @@ const productSchema = new mongoose.Schema({
     type: String,
     required: true
    },
-   stock: {
-    type: Number,
+   goal: {
+    type: String,
     required: true
    },
-   new_price: {
-    type: Number,
+   message: {
+    type: String,
     required: true
    },
-   old_price: {
-    type: Number,
+   date : {
+    type: String,
+    default: () => moment().format('DD-MM-YYYY'), // Format date as "19-10-2024"
     required: true
    },
    avilable: {
@@ -107,9 +109,9 @@ app.post("/addProduct", async (req, res)=>{
       name: req.body.name,
       image: req.body.image,
       category: req.body.category,
-      stock: req.body.stock,
-      new_price: req.body.new_price,
-      old_price: req.body.old_price
+      goal: req.body.goal,
+      message: req.body.message,
+      date: req.body.date
     });
 
     console.log(product);
@@ -233,11 +235,11 @@ app.post("/login", async (req, res)=> {
 
     // Creating endpoint for Popular in women 
 
-    app.get("/popularinwomen", async (req, res)=> {
-      let products = await Product.find({category: "women"});
-      let popularinwomen = products.slice(0,4);
-      console.log("PopularInWomen Fetched");
-      res.send(popularinwomen)
+    app.get("/popularinhabit", async (req, res)=> {
+      let products = await Product.find({category: "daily"});
+      let popularinhabit = products.slice(0,4);
+      console.log("PopularInHabit Fetched");
+      res.send(popularinhabit)
     })
 
     // creating middleware to fetch user
@@ -280,29 +282,7 @@ app.post("/login", async (req, res)=> {
   res.send("Removed");
 })
 
-//  Creating endpoint to get cartData
 
-// app.post("/getcart", fetchUser, async (req, res)=> {
-//   console.log("Getcart");
-//   let userData = await Users.findOne({_id: req.user.id});
-//    res.json(userData.cartData);
-// })
-
-
-// app.post("/getcart", fetchUser, async (req, res) => {
-//   console.log("Getcart");
-
-//   // Fetch user data
-//   let userData = await Users.findOne({ _id: req.user.id });
-
-//   // Ensure cartData is initialized
-//   if (!userData.cartData) {
-//     userData.cartData = {}; // Initialize cartData if null or undefined
-//     await Users.findOneAndUpdate({ _id: req.user.id }, { cartData: userData.cartData });
-//   }
-
-//   res.json(userData.cartData);
-// });
 
 app.post("/getcart", fetchUser, async (req, res) => {
   console.log("Getcart");

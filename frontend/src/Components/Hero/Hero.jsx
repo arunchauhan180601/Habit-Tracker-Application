@@ -13,8 +13,8 @@ const Hero = () => {
         <div className="row d-flex">
 
           <div className="col-sm-6 hero-left-side   ">
-            <h3 className='subHeading'>NEW ARRIVALS ONLY</h3>
-            <h1 className='heading'>new   <img src={handIcon} className='handicon img-fluid' /> <br /> collection  <br /> for everyone</h1>
+            <h3 className='subHeading'>NEW HABITS ONLY</h3>
+            <h1 className='heading'>new   <img src={handIcon} className='handicon img-fluid' /> <br /> habits that  <br />  everyone have</h1>
 
             <Link to="#"><button type="button" className="btn  herobtn">Latest Collection <FaArrowRight /></button></Link>
           </div>

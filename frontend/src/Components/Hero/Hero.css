@@ -8,7 +8,7 @@
 }
 
 .Hero-main {
-  background-image: linear-gradient(to bottom, rgba(128, 0, 128, 0.813), white);
+  background-image: linear-gradient(to bottom, #d6d70f, white);
 }
 
 .subHeading {
@@ -21,12 +21,12 @@
 }
 
 .herobtn {
-  background-color: purple;
+  background-color: #d6d70f;
   margin-top: 20px;
 
   border-radius: 30px;
   padding: 10px 30px;
-  color: white;
+  color: black;
 }
 
 .handicon {

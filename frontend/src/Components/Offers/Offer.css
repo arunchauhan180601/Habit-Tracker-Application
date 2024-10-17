@@ -5,7 +5,7 @@
 }
 
 .offer-container {
-  background-image: linear-gradient(to bottom, rgba(128, 0, 128, 0.396), white);
+  background-image: linear-gradient(to bottom, #d6d70f, white);
   border-radius: 5px;
 
 }
@@ -27,8 +27,8 @@
   border-radius: 30px;
 
   margin-top: 20px;
-  background-color: rgb(128, 0, 128);
-  color: white;
+  background-color: #d6d70f;
+  color: black;
 }
 
 .offer-btn:hover {
@@ -40,7 +40,7 @@
 /* Right side */
 .offer-right-image {
   height: 90%;
-  width: 50%;
+  width: 70%;
 }
 
 
@@ -63,7 +63,7 @@
 
   .offer-right-image {
     height: 70%;
-    width: 70%;
+    width: 80%;
   }
 }
 
@@ -81,8 +81,8 @@
 
 @media only screen and (min-width: 568px) and (max-width: 768px) {
   .offer-right-image {
-    height: 70%;
-    width: 60%;
+    height: 60%;
+    width: 80%;
   }
 
   .offer-left-side {
@@ -107,5 +107,10 @@
   .offer-subheading {
 
     font-size: 16px;
+  }
+
+  .offer-right-image {
+    height: 90%;
+    width: 80%;
   }
 }

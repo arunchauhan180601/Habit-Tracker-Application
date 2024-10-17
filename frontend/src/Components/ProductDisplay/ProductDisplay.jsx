@@ -52,36 +52,35 @@ const ProductDisplay = ({ product }) => {
             <img src={star_dull_icon} alt='starDullImage' height="50%" className='img-fluid me-1' />
             <p className='pt-3 '>(122)</p>
           </div>
-          <div className='mt-4 d-flex '>
-            <h5 className='me-5 '>${product.new_price}</h5>
-            <h5 className='text-decoration-line-through text-danger'>${product.old_price}</h5>
-          </div>
+
           <p className='pt-3'>
-            A LightWeight, usually knitted, pullover shirt, close-fitting and with a round nechline and a short sleeves.warn as an undershirt or outer garments.
+            A simple, intuitive tool designed to help you build and maintain positive habits. Easily track daily progress, set custom goals, and view your streaks.
+
+
           </p>
 
-          <h5>Select Size</h5>
-
-          <div className='d-flex  flex-wrap'>
-            <div className='productSizeBtn mt-3'>S</div>
-            <div className='productSizeBtn mt-3'>M</div>
-            <div className='productSizeBtn mt-3'>L</div>
-            <div className='productSizeBtn mt-3'>XL</div>
-            <div className='productSizeBtn mt-3'>XXL</div>
-
+          <div className='mt-3'>
+            <pre className='habitMessage'><span className='text-danger'>Message : </span> {product.message} </pre>
           </div>
 
           <div className='mt-3'>
-            <button className='btn btn-danger mt-3 ps-5 pe-5 pt-2 pb-2 fs-5' onClick={() => { addToCart(product.id) }} >Add to Cart</button>
+            <p><span className='text-danger'>Goal : </span> {product.goal} </p>
+          </div>
+
+
+
+
+          <div className='mt-3'>
+            <p><span className='text-danger'>Date : </span> {product.date} </p>
           </div>
 
           <div className='mt-3'>
-            <p><span className='text-danger'>Stock : </span> {product.stock} Piece</p>
-          </div>
-
-          <div className='mt-3'>
-            <p><span className='text-danger'>Category : </span> {product.category}, T-shirt, crop Top </p>
+            <p><span className='text-danger'>Category : </span> {product.category}, Latest </p>
             <p><span className='text-danger'>Tags : </span> Modern, Latest</p>
+          </div>
+
+          <div className='mt-3'>
+            <button className='btn btn-danger mt-3 ps-5 pe-5 pt-2 pb-2 fs-5' onClick={() => { addToCart(product.id) }} >Add to Habit</button>
           </div>
 
         </div>

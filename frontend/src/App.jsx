@@ -9,9 +9,9 @@ import Cart from "./Pages/Cart"
 import LoginSignup from "./Pages/LoginSignup"
 import Shop from "./Pages/shop"
 import Footer from "./Components/Footer/Footer"
-import banner_mens from "./Components/Assets/banner_mens.png"
-import banner_women from "./Components/Assets/banner_women.png"
-import banner_kids from "./Components/Assets/banner_kids.png"
+import daily_habit from "./Components/Assets/daily-habit.jpg"
+import weekly_habit from "./Components/Assets/weekly-habit.jpg"
+import monthly_habit from "./Components/Assets/monthly-habbit.jpeg"
 
 function App() {
 
@@ -22,9 +22,9 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Shop />} > </Route>
-          <Route path="/mens" element={<ShopCategory banner={banner_mens} category="men" />} > </Route>
-          <Route path="/womens" element={<ShopCategory banner={banner_women} category="women" />} > </Route>
-          <Route path="/kids" element={<ShopCategory banner={banner_kids} category="kid" />} > </Route>
+          <Route path="/daily" element={<ShopCategory banner={daily_habit} category="daily" />} > </Route>
+          <Route path="/weekly" element={<ShopCategory banner={weekly_habit} category="weekly" />} > </Route>
+          <Route path="/monthly" element={<ShopCategory banner={monthly_habit} category="monthly" />} > </Route>
           <Route path="/product" element={<Product />} >
             <Route path=":productId" element={<Product />} ></Route>
           </Route>
