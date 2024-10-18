@@ -29,7 +29,8 @@ A Habit Tracker application built with React for the frontend, Node.js and Expre
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/arunchauhan180601/habit-tracker-app.git
+https://github.com/arunchauhan180601/Habit-Tracker-Application.git
+   
 Navigate to the frontend directory:
 
 bash
